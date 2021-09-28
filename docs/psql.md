@@ -5,6 +5,14 @@
 You may not be well versed in psql / PostgreSQL, which is used in this workshop.
 For your comfort we provide all commands and queries you will need below.
 
+## Using psql to connect to the database
+
+
+```sh
+docker-compose -f docker-compose.yaml exec postgres env PGOPTIONS="--search_path=campaigns" bash -c 'psql -U $POSTGRES_USER postgres'
+```
+
+
 ## psql
 
 `psql` is a PostgreSQL client running in the command line. After connecting to the database
